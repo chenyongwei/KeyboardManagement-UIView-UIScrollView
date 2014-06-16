@@ -11,12 +11,14 @@
 @implementation UIViewKeyboardHandler
 {
     int viewHeight; // for UIVIew as container
+    int viewY;
 }
 
 // Called when the UIKeyboardDidShowNotification is sent.
 - (void)keyboardWasShown:(NSNotification*)aNotification
 {
-    viewHeight = self.mainView.frame.size.height;
+    viewHeight = CGRectGetHeight(self.mainView.frame);
+    viewY = self.mainView.frame.origin.y;
     NSDictionary *info = [aNotification userInfo];
     kbSize = [[info objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
     [self adjustFrame];
@@ -26,7 +28,7 @@
 - (void)keyboardWillBeHidden:(NSNotification*)aNotification
 {
     [UIView animateWithDuration:0.5f animations:^{
-        self.observeView.frame = CGRectMake(self.mainView.frame.origin.x, 0, CGRectGetWidth(self.mainView.frame), viewHeight);
+        self.observeView.frame = CGRectMake(self.mainView.frame.origin.x, viewY, CGRectGetWidth(self.mainView.frame), viewHeight);
     }];
 }
 
