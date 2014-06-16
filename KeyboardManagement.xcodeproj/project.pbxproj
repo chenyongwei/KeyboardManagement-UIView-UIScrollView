@@ -22,6 +22,10 @@
 		8537742E194ED61100AC481F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8537742C194ED61100AC481F /* InfoPlist.strings */; };
 		85377430194ED61100AC481F /* KeyboardManagementTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8537742F194ED61100AC481F /* KeyboardManagementTests.m */; };
 		8537743B194EF0A500AC481F /* UIScrollView+UITouchEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 8537743A194EF0A500AC481F /* UIScrollView+UITouchEvent.m */; };
+		857F228C194F28AF00C2F96D /* KeyboardObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 857F228B194F28AF00C2F96D /* KeyboardObserver.m */; };
+		857F228F194F29F100C2F96D /* BaseKeyboardHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 857F228E194F29F100C2F96D /* BaseKeyboardHandler.m */; };
+		857F2292194F306600C2F96D /* UIScrollViewKeyboardHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 857F2291194F306600C2F96D /* UIScrollViewKeyboardHandler.m */; };
+		857F2298194F462200C2F96D /* UIViewKeyboardHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 857F2297194F462200C2F96D /* UIViewKeyboardHandler.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +60,14 @@
 		8537742F194ED61100AC481F /* KeyboardManagementTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KeyboardManagementTests.m; sourceTree = "<group>"; };
 		85377439194EF0A500AC481F /* UIScrollView+UITouchEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+UITouchEvent.h"; sourceTree = "<group>"; };
 		8537743A194EF0A500AC481F /* UIScrollView+UITouchEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+UITouchEvent.m"; sourceTree = "<group>"; };
+		857F228A194F28AF00C2F96D /* KeyboardObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyboardObserver.h; sourceTree = "<group>"; };
+		857F228B194F28AF00C2F96D /* KeyboardObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyboardObserver.m; sourceTree = "<group>"; };
+		857F228D194F29F100C2F96D /* BaseKeyboardHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseKeyboardHandler.h; sourceTree = "<group>"; };
+		857F228E194F29F100C2F96D /* BaseKeyboardHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseKeyboardHandler.m; sourceTree = "<group>"; };
+		857F2290194F306600C2F96D /* UIScrollViewKeyboardHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIScrollViewKeyboardHandler.h; sourceTree = "<group>"; };
+		857F2291194F306600C2F96D /* UIScrollViewKeyboardHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIScrollViewKeyboardHandler.m; sourceTree = "<group>"; };
+		857F2296194F462200C2F96D /* UIViewKeyboardHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewKeyboardHandler.h; sourceTree = "<group>"; };
+		857F2297194F462200C2F96D /* UIViewKeyboardHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewKeyboardHandler.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +136,14 @@
 				8537740B194ED61100AC481F /* Supporting Files */,
 				85377439194EF0A500AC481F /* UIScrollView+UITouchEvent.h */,
 				8537743A194EF0A500AC481F /* UIScrollView+UITouchEvent.m */,
+				857F228A194F28AF00C2F96D /* KeyboardObserver.h */,
+				857F228B194F28AF00C2F96D /* KeyboardObserver.m */,
+				857F228D194F29F100C2F96D /* BaseKeyboardHandler.h */,
+				857F228E194F29F100C2F96D /* BaseKeyboardHandler.m */,
+				857F2296194F462200C2F96D /* UIViewKeyboardHandler.h */,
+				857F2297194F462200C2F96D /* UIViewKeyboardHandler.m */,
+				857F2290194F306600C2F96D /* UIScrollViewKeyboardHandler.h */,
+				857F2291194F306600C2F96D /* UIScrollViewKeyboardHandler.m */,
 			);
 			path = KeyboardManagement;
 			sourceTree = "<group>";
@@ -256,7 +276,11 @@
 			files = (
 				8537743B194EF0A500AC481F /* UIScrollView+UITouchEvent.m in Sources */,
 				8537741B194ED61100AC481F /* ViewController.m in Sources */,
+				857F2298194F462200C2F96D /* UIViewKeyboardHandler.m in Sources */,
 				85377415194ED61100AC481F /* AppDelegate.m in Sources */,
+				857F228C194F28AF00C2F96D /* KeyboardObserver.m in Sources */,
+				857F2292194F306600C2F96D /* UIScrollViewKeyboardHandler.m in Sources */,
+				857F228F194F29F100C2F96D /* BaseKeyboardHandler.m in Sources */,
 				85377411194ED61100AC481F /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -466,6 +490,7 @@
 				85377435194ED61100AC481F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		85377436194ED61100AC481F /* Build configuration list for PBXNativeTarget "KeyboardManagementTests" */ = {
 			isa = XCConfigurationList;
@@ -474,6 +499,7 @@
 				85377438194ED61100AC481F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
