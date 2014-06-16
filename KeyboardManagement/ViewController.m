@@ -22,10 +22,6 @@
 
 @implementation ViewController
 {
-    UITextField *activeField;
-    CGSize kbSize;
-    
-    int viewHeight; // for UIVIew as container
     KeyboardObserver *ob; // put here to in order to retain it.
 }
 
